@@ -1,0 +1,13 @@
+cradle:
+  cabal:
+    - path: "app/Main.hs"
+      component: "learning-haskell:exe:learning-haskell"
+
+    - path: "app/Html.hs"
+      component: "learning-haskell:exe:learning-haskell"
+
+    - path: "app/Html/Internal.hs"
+      component: "learning-haskell:exe:learning-haskell"
+
+    - path: "app/Markup.hs"
+      component: "learning-haskell:exe:learning-haskell"
