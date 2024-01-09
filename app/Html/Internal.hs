@@ -9,6 +9,10 @@ newtype Html = Html String
 newtype Structure = Structure String
   deriving (Show)
 
+instance Semigroup Structure where
+  (<>) c1 c2 =
+    Structure (getStructureString c1 <> getStructureString c2)
+
 type Title = String
 
 el :: String -> String -> String
@@ -48,9 +52,6 @@ ol_ structures = structures & map appendListItem & concat & el "ul" & Structure
   where
     appendListItem :: Structure -> String
     appendListItem (Structure item) = el "li" item
-
-append_ :: Structure -> Structure -> Structure
-append_ (Structure a) (Structure b) = Structure (a <> b)
 
 render :: Html -> String
 render (Html html) = html

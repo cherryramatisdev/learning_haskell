@@ -26,4 +26,6 @@ executable learning-haskell
     other-modules:    Html, Html.Internal, Markup
     build-depends:    base ^>=4.17.2.1
     hs-source-dirs:   app
+    ghc-options: 
+        -Wall
     default-language: Haskell2010
